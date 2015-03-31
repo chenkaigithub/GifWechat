@@ -29,7 +29,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoU-EV-OX4">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="13" y="12" width="164" height="21"/>
@@ -104,6 +104,7 @@
                         <viewControllerLayoutGuide type="bottom" id="srT-u3-bnx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ALp-bJ-66f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peM-tX-jZk">
@@ -115,6 +116,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="338" y="0.0" width="46" height="46"/>
                                 </variation>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="otG-D4-RLa" eventType="touchUpInside" id="ezd-C5-vSh"/>
+                                </connections>
                             </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSP-m0-PSm">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>

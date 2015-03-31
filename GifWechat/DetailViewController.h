@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GifData.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController{
+    @protected
+    GifData* gifData;
+}
+
 
 @property IBOutlet UIButton * button;
 @property IBOutlet UIWebView * webView;
