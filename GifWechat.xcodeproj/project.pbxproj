@@ -14,6 +14,10 @@
 		81AA05D21ACA771D00C76283 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AA05D11ACA771D00C76283 /* Images.xcassets */; };
 		81AA05D51ACA771D00C76283 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81AA05D31ACA771D00C76283 /* LaunchScreen.xib */; };
 		81AA05E11ACA771D00C76283 /* GifWechatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AA05E01ACA771D00C76283 /* GifWechatTests.m */; };
+		81AA05EC1ACA794200C76283 /* GifTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AA05EB1ACA794200C76283 /* GifTableViewCell.m */; };
+		81AA05F01ACA7A0F00C76283 /* DatasourceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AA05EF1ACA7A0F00C76283 /* DatasourceFactory.m */; };
+		81AA05F31ACA7A3D00C76283 /* GifDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AA05F21ACA7A3D00C76283 /* GifDatasource.m */; };
+		81AA05F81ACA7B4000C76283 /* GifData.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AA05F71ACA7B4000C76283 /* GifData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		81AA05DA1ACA771D00C76283 /* GifWechatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifWechatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AA05DF1ACA771D00C76283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81AA05E01ACA771D00C76283 /* GifWechatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifWechatTests.m; sourceTree = "<group>"; };
+		81AA05EA1ACA794200C76283 /* GifTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifTableViewCell.h; sourceTree = "<group>"; };
+		81AA05EB1ACA794200C76283 /* GifTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifTableViewCell.m; sourceTree = "<group>"; };
+		81AA05EE1ACA7A0F00C76283 /* DatasourceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatasourceFactory.h; sourceTree = "<group>"; };
+		81AA05EF1ACA7A0F00C76283 /* DatasourceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatasourceFactory.m; sourceTree = "<group>"; };
+		81AA05F11ACA7A3D00C76283 /* GifDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifDatasource.h; sourceTree = "<group>"; };
+		81AA05F21ACA7A3D00C76283 /* GifDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifDatasource.m; sourceTree = "<group>"; };
+		81AA05F61ACA7B4000C76283 /* GifData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifData.h; sourceTree = "<group>"; };
+		81AA05F71ACA7B4000C76283 /* GifData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,9 @@
 		81AA05C31ACA771D00C76283 /* GifWechat */ = {
 			isa = PBXGroup;
 			children = (
+				81AA05F91ACA7C4A00C76283 /* Images */,
+				81AA05F41ACA7B2A00C76283 /* Data */,
+				81AA05ED1ACA79EF00C76283 /* DataSource */,
 				81AA05C81ACA771D00C76283 /* AppDelegate.h */,
 				81AA05C91ACA771D00C76283 /* AppDelegate.m */,
 				81AA05CB1ACA771D00C76283 /* ViewController.h */,
@@ -89,6 +104,8 @@
 				81AA05D11ACA771D00C76283 /* Images.xcassets */,
 				81AA05D31ACA771D00C76283 /* LaunchScreen.xib */,
 				81AA05C41ACA771D00C76283 /* Supporting Files */,
+				81AA05EA1ACA794200C76283 /* GifTableViewCell.h */,
+				81AA05EB1ACA794200C76283 /* GifTableViewCell.m */,
 			);
 			path = GifWechat;
 			sourceTree = "<group>";
@@ -117,6 +134,33 @@
 				81AA05DF1ACA771D00C76283 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81AA05ED1ACA79EF00C76283 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				81AA05EE1ACA7A0F00C76283 /* DatasourceFactory.h */,
+				81AA05EF1ACA7A0F00C76283 /* DatasourceFactory.m */,
+				81AA05F11ACA7A3D00C76283 /* GifDatasource.h */,
+				81AA05F21ACA7A3D00C76283 /* GifDatasource.m */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		81AA05F41ACA7B2A00C76283 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				81AA05F61ACA7B4000C76283 /* GifData.h */,
+				81AA05F71ACA7B4000C76283 /* GifData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		81AA05F91ACA7C4A00C76283 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +265,11 @@
 			files = (
 				81AA05CD1ACA771D00C76283 /* ViewController.m in Sources */,
 				81AA05CA1ACA771D00C76283 /* AppDelegate.m in Sources */,
+				81AA05F81ACA7B4000C76283 /* GifData.m in Sources */,
+				81AA05EC1ACA794200C76283 /* GifTableViewCell.m in Sources */,
+				81AA05F01ACA7A0F00C76283 /* DatasourceFactory.m in Sources */,
 				81AA05C71ACA771D00C76283 /* main.m in Sources */,
+				81AA05F31ACA7A3D00C76283 /* GifDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
