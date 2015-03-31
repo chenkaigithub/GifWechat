@@ -11,6 +11,7 @@
 #import "DatasourceFactory.h"
 #import "GifDatasource.h"
 #import "GifData.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -28,9 +29,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[[DatasourceFactory getDataSource] gifs] count];
+    NSMutableArray* gifs = [[DatasourceFactory getDataSource] gifs];
+    return [gifs count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -49,7 +52,41 @@
         result.nameLabel.text = data.name;
     }
     
-    return nil;
+    return result;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"DetailSegue"])
+    {
+        // Get reference to the destination view controller
+        DetailViewController *vc = [segue destinationViewController];
+        
+        GifData* data;
+//        if (self.searchDisplayController.active == YES)
+//        {
+//            NSArray* estates = _searchResults;
+//            NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForCell:sender];
+//            data = [estates objectAtIndex:indexPath.row];
+//        }
+//        else
+        {
+            NSArray* gifs =[[DatasourceFactory getDataSource] gifs];
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            data = [gifs objectAtIndex:indexPath.row];
+        }
+        
+        [vc setGifData:data];
+    }
+//    else if ([[segue identifier] isEqualToString:@"CreateAccountSegue"])
+//    {
+//        // Get reference to the destination view controller
+//        NoteViewController *vc = [segue destinationViewController];
+//        
+//        [vc setEstateData:nil];
+//    }
 }
 
 

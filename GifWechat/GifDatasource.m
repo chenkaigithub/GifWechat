@@ -15,7 +15,8 @@
 {
     if (self = [super init])
     {
-        [_gifs addObject:[[GifData alloc] initWithName:@"TestGif" file:@"TestGif" url:@""]];
+        _gifs = [[NSMutableArray alloc] init];
+        [_gifs addObject:[[GifData alloc] initWithName:@"TestGif" file:@"kitty" url:@""]];
     }
     return self;
 }
