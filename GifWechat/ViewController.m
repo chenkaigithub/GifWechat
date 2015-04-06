@@ -80,13 +80,30 @@
         
         [vc setGifData:data];
     }
-//    else if ([[segue identifier] isEqualToString:@"CreateAccountSegue"])
-//    {
+    else if ([[segue identifier] isEqualToString:@"AddGifSegue"])
+    {
 //        // Get reference to the destination view controller
 //        NoteViewController *vc = [segue destinationViewController];
 //        
 //        [vc setEstateData:nil];
-//    }
+//        BrowserViewController *vc = [segue destinationViewController];
+        
+        GifData* data;
+        //        if (self.searchDisplayController.active == YES)
+        //        {
+        //            NSArray* estates = _searchResults;
+        //            NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForCell:sender];
+        //            data = [estates objectAtIndex:indexPath.row];
+        //        }
+        //        else
+        {
+            NSArray* gifs =[[DatasourceFactory getDataSource] gifs];
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            data = [gifs objectAtIndex:indexPath.row];
+        }
+        
+//        [vc setGifData:data];
+    }
 }
 
 

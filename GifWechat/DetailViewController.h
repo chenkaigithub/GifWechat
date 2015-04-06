@@ -15,7 +15,6 @@
 }
 
 
-@property IBOutlet UIButton * button;
 @property IBOutlet UIWebView * webView;
 
 - (void)setGifData:(GifData*)gifData;

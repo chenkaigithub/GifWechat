@@ -33,10 +33,5 @@
     gifData = data;
 }
 
-#pragma mark - IBAction
-
-- (IBAction)closeButtonTouched:(id)sender {
-    [self dismissViewControllerAnimated:TRUE completion:nil];
-}
 
 @end
